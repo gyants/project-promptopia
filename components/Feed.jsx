@@ -23,7 +23,7 @@ const Feed = () => {
   const [posts, setPosts] = useState([]);
 
   const handleSearchChange = (e) => {
-
+    setSearchText(e.target.value)
   }
 
   useEffect(() => {
@@ -33,8 +33,6 @@ const Feed = () => {
 
       setPosts(data);
     }
-
-    console.log(posts);
 
     fetchPosts();
   }, []);
